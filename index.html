@@ -187,67 +187,140 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contacto" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12">Contacto</h2>
-            <div class="max-w-2xl mx-auto">
-                <form id="contact-form" action="contacto.php" method="POST" class="grid grid-cols-1 gap-6 text-left bg-gray-50 p-8 rounded-xl shadow-sm">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                            <input id="nombre" name="nombre" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
-                        </div>
-                        <div>
-                            <label for="apellido" class="block text-sm font-medium text-gray-700 mb-1">Apellido</label>
-                            <input id="apellido" name="apellido" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
+    <section id="contacto" class="py-24 bg-gray-50 relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-orange-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Hablemos de tu <span class="text-orange-600">próximo proyecto</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Completá el formulario y nos pondremos en contacto a la brevedad para asesorarte sin compromiso.</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Panel de información (Izquierda) -->
+                <div class="bg-gradient-to-br from-orange-600 to-orange-800 text-white p-10 lg:p-12 lg:w-2/5 relative overflow-hidden flex flex-col justify-between">
+                    <!-- Patrón decorativo -->
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                        <i class="fas fa-hard-hat text-9xl"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 opacity-10 transform -translate-x-1/4 translate-y-1/4">
+                        <i class="fas fa-tools text-9xl"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <p class="text-orange-100 mb-10 leading-relaxed">Estamos listos para transformar tus ideas en una realidad tangible. Escribinos o llamanos directamente.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-orange-200 mb-1">Llamanos</p>
+                                    <div class="flex items-center gap-2">
+                                        <a id="contact-phone" href="tel:+5492325404861" class="text-lg font-semibold hover:text-white transition">+54 9 2325 40-4861</a>
+                                        <button id="copy-phone" type="button" class="text-orange-200 hover:text-white transition" title="Copiar número">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-orange-200 mb-1">Escribinos</p>
+                                    <div class="flex items-center gap-2">
+                                        <a id="contact-email" href="mailto:martinrodolfomiano@gmail.com" class="text-lg font-semibold hover:text-white transition break-all">martinrodolfomiano@gmail.com</a>
+                                        <button id="copy-email" type="button" class="text-orange-200 hover:text-white transition" title="Copiar email">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-orange-200 mb-1">Ubicación</p>
+                                    <p class="text-lg font-semibold">Buenos Aires, Argentina</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
-                            <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
-                        </div>
-                        <div>
-                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                            <input id="telefono" name="telefono" type="tel" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
-                        </div>
-                    </div>
-                    <div>
-                        <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
-                        <textarea id="asunto" name="asunto" rows="4" maxlength="250" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3"></textarea>
-                        <div class="text-right text-xs text-gray-500 mt-1"><span id="asunto-count">0</span>/250</div>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition">Enviar</button>
-                    </div>
-                    <p id="form-status" class="text-center text-sm mt-2 hidden opacity-0 transition-opacity duration-700 rounded px-3 py-2"></p>
-                </form>
-                <div class="grid md:grid-cols-2 gap-12 mt-12">
-                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
-                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6 text-2xl">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Email</h4>
-                        <div class="flex items-center gap-3">
-                            <a id="contact-email" href="mailto:martinrodolfomiano@gmail.com" class="text-gray-600 text-lg hover:text-orange-600" aria-label="Enviar correo a martinrodolfomiano@gmail.com">martinrodolfomiano@gmail.com</a>
-                            <button id="copy-email" type="button" class="inline-flex items-center text-orange-600 hover:text-orange-700 text-sm border border-orange-200 rounded px-2 py-1">
-                                <i class="fas fa-copy mr-1"></i> Copiar
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
-                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6 text-2xl">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Teléfono</h4>
-                        <div class="flex items-center justify-center gap-3 flex-nowrap">
-                            <a id="contact-phone" href="tel:+5492325404861" class="text-gray-600 text-lg hover:text-orange-600 whitespace-nowrap" aria-label="Llamar al +54 9 2325 40-4861">+54 9 2325 40-4861</a>
-                            <button id="copy-phone" type="button" class="inline-flex items-center text-orange-600 hover:text-orange-700 text-sm border border-orange-200 rounded px-2 py-1">
-                                <i class="fas fa-copy mr-1"></i> Copiar
-                            </button>
-                        </div>
+                    
+                    <div class="mt-12 flex gap-4 relative z-10">
+                        <a href="https://www.facebook.com/martinrodolfo.miano" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-orange-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/martin__rodolfo/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-orange-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5492325404861" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-orange-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
+                
+                <!-- Formulario (Derecha) -->
+                <div class="p-10 lg:p-12 lg:w-3/5 bg-white">
+                    <form id="contact-form" action="contacto.php" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input id="nombre" name="nombre" type="text" required placeholder="Nombre" class="block w-full pl-10 pr-3 py-3 border-b-2 border-gray-200 bg-transparent focus:border-orange-500 focus:ring-0 outline-none transition-colors peer" />
+                            </div>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                                    <i class="far fa-user"></i>
+                                </div>
+                                <input id="apellido" name="apellido" type="text" required placeholder="Apellido" class="block w-full pl-10 pr-3 py-3 border-b-2 border-gray-200 bg-transparent focus:border-orange-500 focus:ring-0 outline-none transition-colors peer" />
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <input id="email" name="email" type="email" required placeholder="Correo electrónico" class="block w-full pl-10 pr-3 py-3 border-b-2 border-gray-200 bg-transparent focus:border-orange-500 focus:ring-0 outline-none transition-colors peer" />
+                            </div>
+                            <div class="relative group">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <input id="telefono" name="telefono" type="tel" required placeholder="Teléfono" class="block w-full pl-10 pr-3 py-3 border-b-2 border-gray-200 bg-transparent focus:border-orange-500 focus:ring-0 outline-none transition-colors peer" />
+                            </div>
+                        </div>
+                        
+                        <div class="relative group mt-8">
+                            <div class="absolute top-3 left-0 pl-3 pointer-events-none text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <textarea id="asunto" name="asunto" rows="4" maxlength="250" required placeholder="¿En qué te podemos ayudar?" class="block w-full pl-10 pr-3 py-3 border-b-2 border-gray-200 bg-transparent focus:border-orange-500 focus:ring-0 outline-none transition-colors resize-none peer"></textarea>
+                            <div class="absolute bottom-2 right-2 text-xs text-gray-400 font-medium"><span id="asunto-count">0</span>/250</div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-gray-900 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl flex items-center justify-center gap-3">
+                                <span>Enviar Mensaje</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p id="form-status" class="text-center text-sm mt-4 hidden opacity-0 transition-opacity duration-700 rounded-lg px-4 py-3 font-medium"></p>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </section>
