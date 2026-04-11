@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRM Construcción - Obras de Casas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-construction {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), image-set(
+                url('img/hero-bg-1920.webp') type('image/webp') 1x,
+                url('img/hero-bg.jpg') type('image/jpeg') 1x
+            );
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), -webkit-image-set(
+                url('img/hero-bg-1920.webp') type('image/webp') 1x,
+                url('img/hero-bg.jpg') type('image/jpeg') 1x
+            );
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="img/logo.png" alt="MRM" class="h-8 w-auto mr-3 md:h-10">
+                    <span class="text-2xl font-bold text-orange-600">MRM</span>
+                    <span class="ml-2 text-xl font-semibold tracking-tight">Construcción</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Inicio</a>
+                        <a href="#sobre-nosotros" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Sobre Nosotros</a>
+                        <a href="#trabajos" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Trabajos</a>
+                        <a href="#contacto" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium transition">Contacto</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-orange-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4">
+            <a href="#inicio" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600">Inicio</a>
+            <a href="#sobre-nosotros" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600">Sobre Nosotros</a>
+            <a href="#trabajos" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600">Trabajos</a>
+            <a href="#contacto" class="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <header id="inicio" class="h-screen flex items-center justify-center bg-construction text-white pt-16">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">MRM Construcción</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">Especialistas en la construcción de casas. Convertimos tus sueños en hogares sólidos y duraderos.</p>
+            <a href="#trabajos" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">Ver Nuestros Proyectos</a>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
+                Sobre Nosotros
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-orange-600 mt-2"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center text-left">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-600">Nuestra Historia</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Con años de trayectoria en el mercado, MRM Construcción nació con el objetivo de brindar soluciones integrales en la edificación de viviendas. Nos enfocamos en la calidad, el cumplimiento de plazos y la satisfacción total de nuestros clientes.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Nuestro equipo está conformado por profesionales apasionados que cuidan cada detalle de la obra, desde los cimientos hasta los acabados finales.
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-2xl h-64 md:h-80 flex items-center justify-center bg-white">
+                    <img src="img/logo.png" alt="Logo MRM" class="w-full h-full object-contain p-6" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Trabajos -->
+    <section id="trabajos" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Trabajos</h2>
+                <div class="w-16 h-1 bg-orange-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600">Una muestra de la calidad y dedicación en cada uno de nuestros proyectos.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trabajo Baño -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Remodelación de Baño', ['img/baño (1).jpg', 'img/baño (3).jpg', 'img/baño (4).jpg', 'img/baño (5).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/baño (1).jpg" alt="Remodelación de Baño" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Remodelación de Baño</h4>
+                        <p class="text-gray-600">Renovación completa con revestimientos modernos y grifería de diseño.</p>
+                    </div>
+                </div>
+                <!-- Trabajo Piscina -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Piscina', ['img/piscina (1).jpg', 'img/piscina (2).jpg', 'img/piscina (3).jpg', 'img/piscina (4).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/piscina (1).jpg" alt="Piscina" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Piscina</h4>
+                        <p class="text-gray-600">Construcción y revestimiento de piscina con bordes térmicos y solárium.</p>
+                    </div>
+                </div>
+                <!-- Trabajo Piscina y Quincho -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Piscina y Quincho', ['img/piscinaYquincho (19).jpg', 'img/piscinaYquincho (1).jpg', 'img/piscinaYquincho (2).jpg', 'img/piscinaYquincho (3).jpg', 'img/piscinaYquincho (4).jpg', 'img/piscinaYquincho (5).jpg', 'img/piscinaYquincho (6).jpg', 'img/piscinaYquincho (7).jpg', 'img/piscinaYquincho (8).jpg', 'img/piscinaYquincho (9).jpg', 'img/piscinaYquincho (10).jpg', 'img/piscinaYquincho (11).jpg', 'img/piscinaYquincho (12).jpg', 'img/piscinaYquincho (13).jpg', 'img/piscinaYquincho (14).jpg', 'img/piscinaYquincho (15).jpg', 'img/piscinaYquincho (16).jpg', 'img/piscinaYquincho (18).jpg', 'img/piscinaYquincho (20).jpg', 'img/piscinaYquincho (21).jpg', 'img/piscinaYquincho (22).jpg', 'img/piscinaYquincho (23).jpg', 'img/piscinaYquincho (24).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/piscinaYquincho (19).jpg" alt="Piscina y Quincho" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Piscina y Quincho</h4>
+                        <p class="text-gray-600">Construcción integral de quincho moderno y piscina con diseño personalizado.</p>
+                    </div>
+                </div>
+                <!-- Trabajo Renovación de Techo -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Renovación de Techo', ['img/techo (1).jpg', 'img/techo (4).jpg', 'img/techo (5).jpg', 'img/techo (6).jpg', 'img/techo (7).jpg', 'img/techo (2).jpg', 'img/techo (3).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/techo (1).jpg" alt="Renovación de Techo" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1632759162353-332f69a0ecf8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Renovación de Techo</h4>
+                        <p class="text-gray-600">Cambio completo de estructura y cubierta, asegurando máxima aislación y durabilidad.</p>
+                    </div>
+                </div>
+                <!-- Trabajo Remodelación de Cocina -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Remodelación de Cocina', ['img/cocina (2).jpg', 'img/cocina (1).jpg', 'img/cocina (3).jpg', 'img/cocina (4).jpg', 'img/cocina (5).jpg', 'img/cocina (6).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/cocina (2).jpg" alt="Remodelación de Cocina" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Remodelación de Cocina</h4>
+                        <p class="text-gray-600">Diseño y modernización integral de cocinas, optimizando espacio y funcionalidad.</p>
+                    </div>
+                </div>
+                <!-- Trabajo Construcción de Casa -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 hover:shadow-2xl group cursor-pointer" onclick="openGallery('Construcción de Casa', ['img/casa (4).jpg', 'img/casa (1).jpg', 'img/casa (2).jpg', 'img/casa (3).jpg', 'img/casa (5).jpg', 'img/casa (6).jpg', 'img/casa (7).jpg', 'img/casa (8).jpg', 'img/casa (9).jpg', 'img/casa (10).jpg', 'img/casa (11).jpg', 'img/casa (12).jpg', 'img/casa (13).jpg', 'img/casa (14).jpg', 'img/casa (15).jpg', 'img/casa (16).jpg'])">
+                    <div class="relative overflow-hidden">
+                        <img src="img/casa (4).jpg" alt="Construcción de Casa" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold border-2 border-white px-4 py-2">Ver Detalle</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Construcción de Casa</h4>
+                        <p class="text-gray-600">Obra completa llave en mano, cuidando cada detalle estructural y estético.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Contacto</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" action="contacto.php" method="POST" class="grid grid-cols-1 gap-6 text-left bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                            <input id="nombre" name="nombre" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
+                        </div>
+                        <div>
+                            <label for="apellido" class="block text-sm font-medium text-gray-700 mb-1">Apellido</label>
+                            <input id="apellido" name="apellido" type="text" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                            <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                            <input id="telefono" name="telefono" type="tel" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                        <textarea id="asunto" name="asunto" rows="4" maxlength="250" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 p-3"></textarea>
+                        <div class="text-right text-xs text-gray-500 mt-1"><span id="asunto-count">0</span>/250</div>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition">Enviar</button>
+                    </div>
+                    <p id="form-status" class="text-center text-sm mt-2 hidden opacity-0 transition-opacity duration-700 rounded px-3 py-2"></p>
+                </form>
+                <div class="grid md:grid-cols-2 gap-12 mt-12">
+                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
+                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Email</h4>
+                        <div class="flex items-center gap-3">
+                            <a id="contact-email" href="mailto:martinrodolfomiano@gmail.com" class="text-gray-600 text-lg hover:text-orange-600" aria-label="Enviar correo a martinrodolfomiano@gmail.com">martinrodolfomiano@gmail.com</a>
+                            <button id="copy-email" type="button" class="inline-flex items-center text-orange-600 hover:text-orange-700 text-sm border border-orange-200 rounded px-2 py-1">
+                                <i class="fas fa-copy mr-1"></i> Copiar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm">
+                        <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6 text-2xl">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Teléfono</h4>
+                        <div class="flex items-center justify-center gap-3 flex-nowrap">
+                            <a id="contact-phone" href="tel:+5492325404861" class="text-gray-600 text-lg hover:text-orange-600 whitespace-nowrap" aria-label="Llamar al +54 9 2325 40-4861">+54 9 2325 40-4861</a>
+                            <button id="copy-phone" type="button" class="inline-flex items-center text-orange-600 hover:text-orange-700 text-sm border border-orange-200 rounded px-2 py-1">
+                                <i class="fas fa-copy mr-1"></i> Copiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-orange-500">MRM</span>
+                        <span class="ml-2 text-xl font-semibold">Construcción</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Construyendo calidad desde hace años.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/martinrodolfo.miano" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/martin__rodolfo/" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5492325404861" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/martin-miano-8449b5326/" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between text-gray-500 text-sm">
+                <p>&copy; 2026 MRM Construcción. Todos los derechos reservados.</p>
+                <div class="w-full md:w-auto md:max-w-md">
+                    <div class="flex items-center justify-center md:justify-end">
+                        <button id="admin-toggle" type="button" class="text-[11px] tracking-[0.2em] uppercase text-gray-600 hover:text-orange-500 transition">Admin</button>
+                    </div>
+                    <div id="admin-panel" class="hidden mt-3 rounded-xl border border-gray-800 bg-gray-950 px-4 py-4">
+                        <form id="admin-login-form" class="flex flex-col gap-3">
+                            <input id="admin-email" type="email" autocomplete="username" placeholder="Correo" class="w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus:border-orange-500 focus:outline-none">
+                            <input id="admin-password" type="password" autocomplete="current-password" placeholder="Contraseña" class="w-full rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus:border-orange-500 focus:outline-none">
+                            <button id="admin-login-button" type="submit" class="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700 transition">Ingresar</button>
+                        </form>
+                        <div id="admin-actions" class="hidden flex items-center justify-end gap-2">
+                            <a id="admin-export-link" href="admin_auth.php?action=export" class="inline-flex items-center rounded-lg border border-orange-500 px-4 py-2 text-sm font-semibold text-orange-400 hover:bg-orange-500 hover:text-white transition">Exportar log</a>
+                            <button id="admin-logout-button" type="button" class="rounded-lg border border-gray-700 px-4 py-2 text-sm font-semibold text-gray-300 hover:border-gray-500 hover:text-white transition">Salir</button>
+                        </div>
+                        <p id="admin-status" class="mt-3 text-right text-xs text-gray-400"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Galería -->
+    <div id="gallery-modal" class="fixed inset-0 z-[60] hidden bg-black bg-opacity-95 flex items-center justify-center p-4">
+        <button onclick="closeGallery()" class="absolute top-6 right-6 text-white text-4xl hover:text-orange-500 transition z-[70]">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="max-w-6xl w-full h-full flex flex-col items-center justify-center">
+            <h3 id="gallery-title" class="text-white text-2xl font-bold mb-6 text-center"></h3>
+            
+            <div class="relative w-full flex items-center justify-center group">
+                <button id="prev-btn" onclick="prevImage()" class="absolute left-0 text-white text-5xl hover:text-orange-500 transition p-4 z-[70] hidden group-hover:block">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div id="gallery-image-frame" class="w-full max-w-5xl h-[78vh] flex items-center justify-center overflow-hidden rounded-2xl bg-gray-900 shadow-2xl">
+                    <img id="gallery-img" src="" alt="Gallery Image" class="max-w-full h-full w-auto object-contain transition-all duration-300">
+                </div>
+                
+                <button id="next-btn" onclick="nextImage()" class="absolute right-0 text-white text-5xl hover:text-orange-500 transition p-4 z-[70] hidden group-hover:block">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div id="gallery-counter" class="text-gray-400 mt-6 text-lg"></div>
+            
+            <!-- Thumbnails -->
+            <div id="gallery-thumbnails" class="flex gap-2 mt-6 overflow-x-auto pb-2 max-w-full">
+                <!-- Se llenará con JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica de Galería
+        let currentGalleryImages = [];
+        let currentImageIndex = 0;
+        let currentGalleryTitle = '';
+        const verticalFillGalleries = new Set(['Piscina y Quincho', 'Renovación de Techo', 'Construcción de Casa']);
+
+        function openGallery(title, images) {
+            currentGalleryTitle = title;
+            currentGalleryImages = images;
+            currentImageIndex = 0;
+            
+            document.getElementById('gallery-title').textContent = title;
+            updateGalleryImage();
+            
+            const thumbnailsContainer = document.getElementById('gallery-thumbnails');
+            thumbnailsContainer.innerHTML = '';
+            
+            if (images.length > 1) {
+                images.forEach((img, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.src = img;
+                    thumb.onerror = () => {
+                        thumb.src = 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80';
+                        thumb.onerror = null;
+                    };
+                    thumb.className = `h-16 w-24 object-cover cursor-pointer rounded border-2 transition ${index === 0 ? 'border-orange-500 opacity-100' : 'border-transparent opacity-60 hover:opacity-100'}`;
+                    thumb.onclick = () => {
+                        currentImageIndex = index;
+                        updateGalleryImage();
+                    };
+                    thumbnailsContainer.appendChild(thumb);
+                });
+                document.getElementById('prev-btn').classList.remove('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+            } else {
+                document.getElementById('prev-btn').classList.add('hidden');
+                document.getElementById('next-btn').classList.add('hidden');
+            }
+            
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Bloquear scroll
+        }
+
+        function closeGallery() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+
+        function updateGalleryImage() {
+            const img = document.getElementById('gallery-img');
+            const frame = document.getElementById('gallery-image-frame');
+            const counter = document.getElementById('gallery-counter');
+            const thumbnails = document.getElementById('gallery-thumbnails').children;
+            const useVerticalFill = verticalFillGalleries.has(currentGalleryTitle);
+
+            if (frame) {
+                frame.classList.toggle('items-center', !useVerticalFill);
+                frame.classList.toggle('items-start', useVerticalFill);
+            }
+            img.className = useVerticalFill
+                ? 'h-full w-auto max-w-none transition-all duration-300'
+                : 'max-w-full h-full w-auto object-contain transition-all duration-300';
+            
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.onerror = () => {
+                    img.src = 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';
+                    img.onerror = null;
+                };
+                img.src = currentGalleryImages[currentImageIndex];
+                img.style.opacity = '1';
+                
+                counter.textContent = `${currentImageIndex + 1} / ${currentGalleryImages.length}`;
+                
+                // Actualizar thumbnails
+                Array.from(thumbnails).forEach((thumb, index) => {
+                    if (index === currentImageIndex) {
+                        thumb.classList.add('border-orange-500', 'opacity-100');
+                        thumb.classList.remove('border-transparent', 'opacity-60');
+                    } else {
+                        thumb.classList.remove('border-orange-500', 'opacity-100');
+                        thumb.classList.add('border-transparent', 'opacity-60');
+                    }
+                });
+            }, 150);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+            updateGalleryImage();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            updateGalleryImage();
+        }
+
+        // Cerrar modal con escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowRight' && !document.getElementById('gallery-modal').classList.contains('hidden')) nextImage();
+            if (e.key === 'ArrowLeft' && !document.getElementById('gallery-modal').classList.contains('hidden')) prevImage();
+        });
+
+        fetch('download_images.php', { method: 'POST' }).catch(() => {});
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgTest = new Image();
+            imgTest.onerror = () => {
+                const header = document.getElementById('inicio');
+                if (header) {
+                    header.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')";
+                }
+            };
+            imgTest.src = 'img/hero-bg-1920.webp';
+            const copyBtn = document.getElementById('copy-email');
+            const emailEl = document.getElementById('contact-email');
+            if (copyBtn && emailEl) {
+                copyBtn.addEventListener('click', async () => {
+                    const text = (emailEl.textContent || '').trim();
+                    let success = false;
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            success = true;
+                        } catch (_) {}
+                    }
+                    if (!success) {
+                        const range = document.createRange();
+                        range.selectNodeContents(emailEl);
+                        const sel = window.getSelection();
+                        sel.removeAllRanges();
+                        sel.addRange(range);
+                        try {
+                            document.execCommand('copy');
+                            success = true;
+                        } catch (_) {}
+                        sel.removeAllRanges();
+                    }
+                    const prev = copyBtn.innerHTML;
+                    copyBtn.disabled = true;
+                    copyBtn.innerHTML = success ? '<i class="fas fa-check mr-1"></i> Copiado' : '<i class="fas fa-times mr-1"></i> Falló';
+                    setTimeout(() => {
+                        copyBtn.disabled = false;
+                        copyBtn.innerHTML = prev;
+                    }, 2000);
+                });
+            }
+            const copyPhoneBtn = document.getElementById('copy-phone');
+            const phoneEl = document.getElementById('contact-phone');
+            if (copyPhoneBtn && phoneEl) {
+                copyPhoneBtn.addEventListener('click', async () => {
+                    const text = (phoneEl.textContent || '').trim().replace(/\s|-/g, '');
+                    let success = false;
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            success = true;
+                        } catch (_) {}
+                    }
+                    if (!success) {
+                        const range = document.createRange();
+                        range.selectNodeContents(phoneEl);
+                        const sel = window.getSelection();
+                        sel.removeAllRanges();
+                        sel.addRange(range);
+                        try {
+                            document.execCommand('copy');
+                            success = true;
+                        } catch (_) {}
+                        sel.removeAllRanges();
+                    }
+                    const prev = copyPhoneBtn.innerHTML;
+                    copyPhoneBtn.disabled = true;
+                    copyPhoneBtn.innerHTML = success ? '<i class="fas fa-check mr-1"></i> Copiado' : '<i class="fas fa-times mr-1"></i> Falló';
+                    setTimeout(() => {
+                        copyPhoneBtn.disabled = false;
+                        copyPhoneBtn.innerHTML = prev;
+                    }, 2000);
+                });
+            }
+            const adminToggle = document.getElementById('admin-toggle');
+            const adminPanel = document.getElementById('admin-panel');
+            const adminForm = document.getElementById('admin-login-form');
+            const adminEmail = document.getElementById('admin-email');
+            const adminPassword = document.getElementById('admin-password');
+            const adminStatus = document.getElementById('admin-status');
+            const adminActions = document.getElementById('admin-actions');
+            const adminLogoutButton = document.getElementById('admin-logout-button');
+            const adminLoginButton = document.getElementById('admin-login-button');
+
+            const setAdminState = (authenticated, message = '') => {
+                if (!adminForm || !adminActions || !adminStatus || !adminPassword || !adminEmail) return;
+                adminForm.classList.toggle('hidden', authenticated);
+                adminActions.classList.toggle('hidden', !authenticated);
+                adminStatus.textContent = message || (authenticated ? 'Sesión iniciada' : '');
+                if (!authenticated) {
+                    adminPassword.value = '';
+                }
+            };
+
+            const syncAdminState = async () => {
+                if (location.protocol !== 'http:' && location.protocol !== 'https:') {
+                    setAdminState(false, 'Abrí el sitio desde http://localhost para ingresar.');
+                    return;
+                }
+                try {
+                    const response = await fetch('admin_auth.php?action=status', { credentials: 'same-origin' });
+                    const data = await response.json();
+                    setAdminState(Boolean(data && data.authenticated));
+                } catch (_) {
+                    setAdminState(false, 'No se pudo validar la sesión.');
+                }
+            };
+
+            if (adminToggle && adminPanel) {
+                adminToggle.addEventListener('click', () => {
+                    adminPanel.classList.toggle('hidden');
+                });
+            }
+
+            if (adminForm && adminEmail && adminPassword && adminLoginButton) {
+                adminForm.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+                    const email = adminEmail.value.trim();
+                    const password = adminPassword.value;
+                    if (!email || !password) {
+                        setAdminState(false, 'Completá correo y contraseña.');
+                        return;
+                    }
+                    const previousLabel = adminLoginButton.textContent;
+                    adminLoginButton.disabled = true;
+                    adminLoginButton.textContent = 'Ingresando...';
+                    try {
+                        const response = await fetch('admin_auth.php?action=login', {
+                            method: 'POST',
+                            credentials: 'same-origin',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email, password })
+                        });
+                        const data = await response.json().catch(() => null);
+                        if (response.ok && data && data.success) {
+                            setAdminState(true, 'Sesión iniciada');
+                        } else {
+                            setAdminState(false, data && data.message ? data.message : 'No se pudo iniciar sesión.');
+                        }
+                    } catch (_) {
+                        setAdminState(false, 'Error de conexión al iniciar sesión.');
+                    } finally {
+                        adminLoginButton.disabled = false;
+                        adminLoginButton.textContent = previousLabel;
+                    }
+                });
+            }
+
+            if (adminLogoutButton) {
+                adminLogoutButton.addEventListener('click', async () => {
+                    try {
+                        await fetch('admin_auth.php?action=logout', {
+                            method: 'POST',
+                            credentials: 'same-origin'
+                        });
+                    } catch (_) {}
+                    setAdminState(false, 'Sesión cerrada');
+                });
+            }
+
+            syncAdminState();
+        });
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        const navLinks = menu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+        const asunto = document.getElementById('asunto');
+        const asuntoCount = document.getElementById('asunto-count');
+        if (asunto && asuntoCount) {
+            asunto.addEventListener('input', () => {
+                asuntoCount.textContent = String(asunto.value.length);
+            });
+        }
+        const form = document.getElementById('contact-form');
+        const statusEl = document.getElementById('form-status');
+        if (form && statusEl) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                statusEl.classList.remove('hidden');
+                statusEl.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
+                statusEl.className = 'text-center text-sm mt-2 rounded px-3 py-2 opacity-100 transition-opacity duration-700';
+                const isHttp = location.protocol === 'http:' || location.protocol === 'https:';
+                if (!isHttp) {
+                    statusEl.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Abrí el sitio desde http://localhost con XAMPP (no file://).';
+                    statusEl.classList.remove('text-green-700','bg-green-50','border-green-200','border','opacity-0');
+                    statusEl.classList.add('text-red-700','bg-red-50','border','border-red-200','opacity-100');
+                    setTimeout(() => {
+                        statusEl.classList.remove('opacity-100');
+                        statusEl.classList.add('opacity-0');
+                        setTimeout(() => {
+                            statusEl.classList.add('hidden');
+                            statusEl.textContent = '';
+                            statusEl.classList.remove('text-red-700','bg-red-50','border','border-red-200');
+                        }, 800);
+                    }, 10000);
+                    return;
+                }
+                try {
+                    const formData = new FormData(form);
+                    const url = new URL(form.getAttribute('action'), location.href).toString();
+                    const resp = await fetch(url, { method: 'POST', body: formData });
+                    let data = null;
+                    const ct = resp.headers.get('content-type') || '';
+                    if (ct.includes('application/json')) {
+                        data = await resp.json().catch(() => null);
+                    } else {
+                        const txt = await resp.text().catch(() => '');
+                        if (!resp.ok) {
+                            statusEl.textContent = `Error ${resp.status}: ${txt.slice(0, 120)}`;
+                            statusEl.classList.add('text-red-600');
+                            return;
+                        }
+                    }
+                    if (resp.ok && data && data.success) {
+                        statusEl.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Su consulta ha sido enviada correctamente';
+                        statusEl.classList.remove('text-red-700','bg-red-50','border-red-200','border','opacity-0');
+                        statusEl.classList.add('text-green-700','bg-green-50','border','border-green-200','opacity-100');
+                        form.reset();
+                        if (asuntoCount) asuntoCount.textContent = '0';
+                        setTimeout(() => {
+                            statusEl.classList.remove('opacity-100');
+                            statusEl.classList.add('opacity-0');
+                            setTimeout(() => {
+                                statusEl.classList.add('hidden');
+                                statusEl.textContent = '';
+                                statusEl.classList.remove('text-green-700','bg-green-50','border','border-green-200');
+                            }, 800);
+                        }, 10000);
+                    } else if (!resp.ok) {
+                        statusEl.innerHTML = `<i class="fas fa-exclamation-circle mr-2"></i>Error ${resp.status}.`;
+                        statusEl.classList.remove('text-green-700','bg-green-50','border-green-200','border','opacity-0');
+                        statusEl.classList.add('text-red-700','bg-red-50','border','border-red-200','opacity-100');
+                        setTimeout(() => {
+                            statusEl.classList.remove('opacity-100');
+                            statusEl.classList.add('opacity-0');
+                            setTimeout(() => {
+                                statusEl.classList.add('hidden');
+                                statusEl.textContent = '';
+                                statusEl.classList.remove('text-red-700','bg-red-50','border','border-red-200');
+                            }, 800);
+                        }, 10000);
+                    } else {
+                        statusEl.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>No se pudo guardar el formulario. Intenta de nuevo.';
+                        statusEl.classList.remove('text-green-700','bg-green-50','border-green-200','border','opacity-0');
+                        statusEl.classList.add('text-red-700','bg-red-50','border','border-red-200','opacity-100');
+                        setTimeout(() => {
+                            statusEl.classList.remove('opacity-100');
+                            statusEl.classList.add('opacity-0');
+                            setTimeout(() => {
+                                statusEl.classList.add('hidden');
+                                statusEl.textContent = '';
+                                statusEl.classList.remove('text-red-700','bg-red-50','border','border-red-200');
+                            }, 800);
+                        }, 10000);
+                    }
+                } catch (err) {
+                    statusEl.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Error de conexión con el servidor.';
+                    statusEl.classList.remove('text-green-700','bg-green-50','border-green-200','border','opacity-0');
+                    statusEl.classList.add('text-red-700','bg-red-50','border','border-red-200','opacity-100');
+                    setTimeout(() => {
+                        statusEl.classList.remove('opacity-100');
+                        statusEl.classList.add('opacity-0');
+                        setTimeout(() => {
+                            statusEl.classList.add('hidden');
+                            statusEl.textContent = '';
+                            statusEl.classList.remove('text-red-700','bg-red-50','border','border-red-200');
+                        }, 800);
+                    }, 10000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
