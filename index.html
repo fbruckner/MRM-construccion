@@ -270,7 +270,7 @@
                     <a href="https://www.instagram.com/martin__rodolfo/" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/5492325404861" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
+                    <a id="footer-whatsapp-link" href="https://wa.me/5492325404861" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/martin-miano-8449b5326/" target="_blank" rel="noopener" class="text-gray-400 hover:text-orange-500 text-2xl transition">
@@ -300,6 +300,11 @@
             </div>
         </div>
     </footer>
+
+    <a id="whatsapp-float" href="https://wa.me/5492325404861" target="_blank" rel="noopener" aria-label="Enviar mensaje por WhatsApp" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white text-3xl shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-200 transition">
+        <span class="sr-only">WhatsApp</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Modal de Galería -->
     <div id="gallery-modal" class="fixed inset-0 z-[60] hidden bg-black bg-opacity-95 flex items-center justify-center p-4">
@@ -524,6 +529,12 @@
             const adminActions = document.getElementById('admin-actions');
             const adminLogoutButton = document.getElementById('admin-logout-button');
             const adminLoginButton = document.getElementById('admin-login-button');
+            const footerWhatsApp = document.getElementById('footer-whatsapp-link');
+            const floatingWhatsApp = document.getElementById('whatsapp-float');
+            if (footerWhatsApp && floatingWhatsApp) {
+                const href = footerWhatsApp.getAttribute('href');
+                if (href) floatingWhatsApp.setAttribute('href', href);
+            }
 
             const setAdminState = (authenticated, message = '') => {
                 if (!adminForm || !adminActions || !adminStatus || !adminPassword || !adminEmail) return;
