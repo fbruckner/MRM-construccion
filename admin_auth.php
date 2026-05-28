@@ -2,6 +2,7 @@
 session_set_cookie_params([
     'httponly' => true,
     'samesite' => 'Lax',
+    'secure' => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'),
 ]);
 session_start();
 

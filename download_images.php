@@ -1,8 +1,23 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
+
+// Solo ejecutar si es una solicitud POST explícita (para seguridad)
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
+    exit;
+}
+
+// Opcional: comentar/descomentar para activar/desactivar la descarga automática
+$allowDownload = false; // Cambia a true solo si necesitas descargar las imágenes
+if (!$allowDownload) {
+    echo json_encode(['success' => true, 'message' => 'Descarga de imágenes desactivada']);
+    exit;
+}
+
 $baseDir = __DIR__ . DIRECTORY_SEPARATOR . 'img';
 if (!is_dir($baseDir)) {
-    mkdir($baseDir, 0777, true);
+    mkdir($baseDir, 0755, true);
 }
 $images = [
     // Hero background: JPEG fallback + WebP

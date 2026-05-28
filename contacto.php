@@ -38,7 +38,9 @@ $telefono = $sanitize($telefono);
 $asunto = $sanitize($asunto);
 $dir = __DIR__ . DIRECTORY_SEPARATOR . 'logs';
 if (!is_dir($dir)) {
-    mkdir($dir, 0777, true);
+    mkdir($dir, 0755, true);
+    // Add index.html to prevent directory listing
+    file_put_contents($dir . DIRECTORY_SEPARATOR . 'index.html', '<!DOCTYPE html><title></title>');
 }
 $file = $dir . DIRECTORY_SEPARATOR . 'contactos.csv';
 $exists = file_exists($file);
